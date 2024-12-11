@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Map - AITR, Mangaliya, Indore</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" rel="stylesheet"/>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        #map { height: 100vh; width: 100%; }
+        .sidebar { position: absolute; top: 10px; left: 10px; z-index: 10; background: rgba(255, 255, 255, 0.8); padding: 15px; width: 250px; border-radius: 5px; }
+        .sidebar input { width: 100%; padding: 8px; margin-bottom: 10px; }
+        .location-details { font-size: 14px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar for searching locations -->
+    <div class="sidebar">
+        <input type="text" id="search" placeholder="Search for a building or location..."/>
+        <div id="location-details" class="location-details"></div>
+    </div>
+
+    <!-- Map container -->
+    <div id="map"></div>
+
+    <!-- Leaflet and custom script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script>
+        // Initialize the map with the coordinates of Acropolis Institute of Technology, Mangaliya, Indore
+        var map = L.map('map').setView([22.8207573, 75.9434897], 16);  // Coordinates for AITR
+
+        // Add OpenStreetMap tile layer to the map
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Define campus locations (example locations for AITR)
+        var locations = [
+            { lat: 22.8204251, lon: 75.9430186, name: 'Main Building', info: 'Administration, Classrooms, Faculty Offices' },
+            { lat: 22.8201476, lon: 75.9428715, name: 'Library', info: 'Open from 8 AM to 7 PM, Books, and Online Resources' },
+            { lat: 22.8216146, lon: 75.9435219, name: 'Cafeteria', info: 'Food & Beverages, Open from 9 AM to 9 PM' },
+            { lat: 22.8216235, lon: 75.9428000, name: 'Sports Complex', info: 'Indoor & Outdoor Sports Facilities, Gymnasium' },
+            { lat: 22.8213046, lon: 75.9430069, name: 'CDC Block', info: 'Administration and Management Offices' }
+        ];
+
+        // Add markers to the map for each location
+        locations.forEach(function(location) {
+            var marker = L.marker([location.lat, location.lon]).addTo(map);
+            marker.bindPopup('<b>' + location.name + '</b><br>' + location.info);
+        });
+
+        // Handle search functionality
+        document.getElementById('search').addEventListener('input', function(e) {
+            var searchTerm = e.target.value.toLowerCase();
+            var filteredLocations = locations.filter(function(location) {
+                return location.name.toLowerCase().includes(searchTerm);
+            });
+
+            var details = '';
+            filteredLocations.forEach(function(location) {
+                details += '<p><b>' + location.name + ':</b> ' + location.info + '</p>';
+            });
+
+            document.getElementById('location-details').innerHTML = details;
+
+            // Zoom and pan to first matching location if any
+            if (filteredLocations.length > 0) {
+                var firstMatch = filteredLocations[0];
+                map.setView([firstMatch.lat, firstMatch.lon], 16);
+            }
+        });
+    </script>
+</body>
+</html>

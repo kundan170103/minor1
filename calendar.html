@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Resource Booking Calendar</title>
+  <link rel="stylesheet" href="all.css">
+</head>
+<body>
+  <div class="calendar-container">
+    <h2>Available Resources Calendar</h2>
+    
+    <div id="calendar"></div>
+    
+    <div id="booking-info" class="booking-info" style="display:none;">
+      <h3>Make a Reservation</h3>
+      <p id="selected-date"></p>
+      <label for="resource">Choose a Resource:</label>
+      <select id="resource">
+        <option value="classroom">Classroom</option>
+        <option value="conference_room">Conference Room</option>
+        <option value="lab">Lab</option>
+      </select>
+      <button id="book-button">Reserve</button>
+      
+    </div>
+
+  </div>
+
+  <script src="calendar.js"></script>
+</body>
+</html>

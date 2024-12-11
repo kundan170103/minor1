@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Campus Resource Management</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #56ccf2, #2f80ed); /* Blue gradient background */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #ffffff;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 380px; /* Made the form box smaller */
+            padding: 25px;   /* Reduced padding for a more compact feel */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .form-container h2 {
+            color: #005fae;
+            margin-bottom: 15px;  /* Reduced margin */
+            font-size: 16px; /* Smaller font size for the heading */
+        }
+
+        .form-container label {
+            display: block;
+            font-size: 14px;
+            color: #444;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;   /* Reduced padding to make inputs more compact */
+            margin-bottom: 15px;  /* Reduced margin for better spacing */
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 14px;  /* Smaller font size */
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        .form-container input:focus {
+            border-color: #005fae;
+            outline: none;
+        }
+
+        .form-container .register-btn {
+            display: inline-block;
+            background-color: #005fae;
+            color: white;
+            padding: 10px 20px;   /* Reduced padding for the button */
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            width: 100%;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .form-container .register-btn:hover {
+            background-color: #003f7f;
+        }
+
+        .form-container .back-link {
+            text-decoration: none;
+            color: #005fae;
+            font-size: 12px;  /* Smaller font size for the back link */
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .form-container .back-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            text-align: center;
+            width: 100%;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.8rem;
+            }
+
+            .form-container {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Campus Resource Management</h1>
+    </header>
+
+    <!-- Main Form Container -->
+    <div class="form-container">
+        <h2>Create Your Account</h2>
+        <form action="#" method="POST">
+            <!-- Name -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+            <!-- Username -->
+            <label for="Depertment">Username:</label>
+            <input type="text" id="Depertment" name="Depertment" required placeholder="Choose a department">
+
+            <!-- Password -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Enter a password">
+
+            <!-- Confirm Password -->
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+
+            <!-- College Email -->
+            <label for="email">College Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your college email">
+
+            <!-- Enrollment Number -->
+            <label for="Semester">Enrollment Number:</label>
+            <input type="text" id="Semester" name="Semester" required placeholder="Enter your Semester">
+
+            <!-- Phone Number -->
+            <label for="Mobile No.">Phone Number:</label>
+            <input type="text" id="Mobile No." name="Mobile No." required placeholder="Enter your Mobile number">
+
+            <!-- Register Button as Anchor Tag -->
+            <a href="Log.html" class="register-btn">Register</a>
+        </form>
+        <a href="Log.html"> Already have an account? Login here </a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Campus Resource Management | Acropolis Institute of Technology and Research</p>
+    </footer>
+
+</body>
+
+</html>
+

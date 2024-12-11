@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Resource Booking</title>
+    <style>
+        /* Basic Reset */
+        body, h1, h2, p, form, input, select, button, textarea {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #4CAF50;
+        }
+
+        .booking-form {
+            background-color: #ffffff;
+            width: 60%;
+            margin: 40px auto;
+            padding: 30px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            border-top: 4px solid #4CAF50;
+        }
+
+        .booking-form h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .booking-form label {
+            font-size: 18px;
+            color: #444;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .booking-form input, .booking-form select, .booking-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .booking-form textarea {
+            resize: vertical;
+        }
+
+        .booking-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .booking-form button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Queries for Mobile */
+        @media screen and (max-width: 768px) {
+            .booking-form {
+                width: 90%;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Campus Resource Booking</h1>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <a href="MainP.html">Home</a>
+        <a href="reservationpage.html">Reservation</a>
+        <a href="#">Booking</a>
+        <a href="map.html">Map</a>
+        <a href="#">More</a>
+    </nav>
+
+    <!-- Booking Form Section -->
+    <div class="booking-form">
+        <h2>Book a Resource</h2>
+        <form action="#" method="POST">
+            <!-- Resource Selection -->
+            <label for="resource">Select Resource:</label>
+            <select id="resource" name="resource" required>
+                <option value="sports_equipment">Sports Equipment</option>
+                <option value="lab_seat">Lab Seat</option>
+                <option value="meeting_room">Meeting Room</option>
+                <option value="conference_hall">Conference Hall</option>
+            </select>
+
+            <!-- Enrollment Number -->
+            <label for="enrollment">Enrollment Number:</label>
+            <input type="text" id="enrollment" name="enrollment" required placeholder="Enter your enrollment number">
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+
+            <!-- College Email -->
+            <label for="email">College Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your college email">
+
+            <!-- Date Selection -->
+            <label for="date">Booking Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <!-- Comment Section -->
+            <label for="comment">What type of equipment do you want?</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="Enter your requirements here..."></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Campus Resource Management</p>
+        <p>
+            <a href="#about">About Us</a> | 
+            <a href="#contact">Contact Us</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

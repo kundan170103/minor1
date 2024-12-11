@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Booking Resource Management</title>
+    <style>
+        /* Basic Reset */
+        body, h1, h2, p, nav, footer, section {
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fafafa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 40px;
+            background-color: white;
+        }
+
+        section {
+            background-color: #e3f2fd;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            width: 28%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        section:hover {
+            transform: translateY(-10px);
+        }
+
+        section h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        section p {
+            text-align: center;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .about-us, .contact-us {
+            padding: 40px;
+            background-color: #ffeb3b;
+            text-align: center;
+        }
+
+        .about-us h2, .contact-us h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Queries for Mobile */
+        @media screen and (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            section {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Campus Booking Resource Management</h1>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="book.html">Booking</a>
+        <a href="map.html">Map</a>
+        <a href="#">resources</a>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <section>
+            <h2>Home</h2>
+            <p>Welcome to the campus booking portal! Effortlessly manage your room reservations and campus facilities.</p>
+        </section>
+        <section>
+            <h2>Resources</h2>
+            <p>lab seat, ,study room and more with ease, using our intuitive booking interface.</p>
+        </section>
+        <section>
+            <h2>Booking</h2>
+            <p>Quickly check availability and make bookings for classrooms, auditoriums, or conference rooms.</p>
+        </section>
+        <section>
+            <h2>Map</h2>
+            <p>Use our interactive map to navigate through the campus and find available resources easily.</p>
+        </section>
+    </div>
+
+    <!-- About Us Section -->
+    <div class="about-us">
+        <h2>About Us</h2>
+        <p>Acropolis Institute of Technology and Research, located in Mangliya, Indore, is a prestigious engineering institute offering world-class education and cutting-edge research facilities. The institute is committed to nurturing innovation and developing skilled professionals who excel in their respective fields.</p>
+        <img src="https://images.collegedunia.com/public/reviewPhotos/659244/4-1.jpg?mode=cover" alt="Acropolis Institute of Technology" style="width: 100%; height: auto; border-radius: 8px; margin-top: 20px;">
+    </div>
+
+    <!-- Contact Us Section -->
+    <div class="contact-us">
+        <h2>Contact Us</h2>
+        <p>If you have any queries or need assistance, feel free to reach out:</p>
+        <p>Email: <a href="mailto:xyz@example.com">xyz@example.com</a></p>
+        <p>Phone: +91 123 456 7890</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Campus Resource Management</p>
+        <p>
+            <a href="#about">About Us</a> | 
+            <a href="#contact">Contact Us</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
+
+
